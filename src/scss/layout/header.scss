@@ -1,0 +1,13 @@
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+
+.header {
+  box-shadow: 0 px-to-rem(3px) px-to-rem(6px) #00000029;
+  &__inner {
+    padding-inline: px-to-rem(25px);
+    box-sizing: border-box;
+    @include flex(space-between , center);
+    position: relative;
+  }
+}

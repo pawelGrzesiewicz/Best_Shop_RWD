@@ -1,0 +1,13 @@
+@import "../variables";
+@import "../helpers/functions";
+
+
+.logo {
+  font-size: px-to-rem(32px);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  color: #08A6E4;
+  text-decoration: none;
+  padding-top: px-to-rem(16px);
+  padding-bottom: px-to-rem(17px);
+}
