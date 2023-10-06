@@ -9,13 +9,13 @@
   position: absolute;
   right: px-to-rem(30px);
   z-index: 42;
-  @media screen and (min-width: px-to-rem(720px)) {
+  @media screen and (min-width: px-to-rem(860px)) {
     display: none;
   }
   &__icon {
     width: 100%;
     height: px-to-rem(2px);
-    background-color: #07ACE6;
+    background-color: $base-color;
     display: inline-block;
     transition: all 200ms ease-in-out;
     position: absolute;

@@ -4,7 +4,7 @@
 .navigation {
 
   @include flex(flex-end);
-  @media screen and (max-width: px-to-rem(720px)) {
+  @media screen and (max-width: px-to-rem(860px)) {
     display: none;
   }
   &__item {
@@ -18,11 +18,11 @@
     transition: all 200ms ease-in-out;
   }
   &__item:hover {
-    border-bottom: px-to-rem(4px) solid #08A6E4;
+    border-bottom: px-to-rem(4px) solid $base-color;
     color: #000000;
   }
   &__item--active {
-    border-bottom: px-to-rem(4px) solid #08A6E4;
+    border-bottom: px-to-rem(4px) solid $base-color;
     color: #000000;
   }
 
