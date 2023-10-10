@@ -272,6 +272,7 @@ html, body {
   text-align: center;
   margin-top: 3.125rem;
   margin-bottom: 0;
+  padding-inline: 60px;
   font-family: Raleway, sans-serif;
   font-size: 1.875rem;
   font-weight: 400;
@@ -384,33 +385,77 @@ html, body {
   transform: rotate(-45deg);
 }
 
-.items {
-  margin-top: 1.5625rem;
-}
-
 .items .item {
   flex-direction: wrap;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 7.25rem;
+  margin-top: 1.5625rem;
+  margin-bottom: 0;
   display: flex;
+}
+
+.items .item:last-child {
+  margin-bottom: 3.125rem;
 }
 
 .items .item .graph {
+  justify-content: center;
+  align-items: center;
   display: flex;
   position: relative;
+  left: -.4375rem;
 }
 
 .items .item .graph__circle {
-  background-color: red;
+  background-color: gray;
   border-radius: 50%;
   width: 3.91938rem;
   height: 3.91938rem;
 }
 
+.items .item .graph__circle--1 {
+  background-color: #fb3b64;
+}
+
+.items .item .graph__circle--2 {
+  background-color: #08a6e4;
+}
+
+.items .item .graph__circle--3 {
+  background-color: #55dfb4;
+}
+
 .items .item .graph__img {
+  margin-bottom: 0;
   position: absolute;
-  left: 1.95938rem;
+  left: 1.95969rem;
+}
+
+.items .item__hdl {
+  letter-spacing: .3725rem;
+  color: #000;
+  max-width: 7.25rem;
+  margin-top: .88625rem;
+  margin-bottom: 0;
+  font-family: Raleway, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  position: relative;
+}
+
+.items .item__dsc {
+  color: #a5a5a5;
+  margin-top: 1.19438rem;
+  margin-bottom: 0;
+  font-family: Raleway, sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  display: flex;
+  position: relative;
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */
