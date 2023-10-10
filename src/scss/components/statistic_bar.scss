@@ -1,0 +1,26 @@
+@import "../helpers/mixins";
+@import "../helpers/functions";
+
+.items {
+  margin-top: px-to-rem(25px);
+  .item {
+    @include flex(center, center, wrap);
+    flex-direction: column;
+    .graph {
+      display: flex;
+      position: relative;
+      &__circle{
+        width: px-to-rem(62.71px);
+        height: px-to-rem(62.71px);
+        border-radius: 50%;
+        background-color: red;
+      }
+      &__img{
+        position: absolute;
+        left: px-to-rem(31.35px);
+      }
+    }
+    &__hdl{}
+    &__dsc{}
+  }
+}

@@ -1,0 +1,18 @@
+@import "../helpers/mixins";
+@import "../variables";
+@import "../helpers/functions";
+
+.statistics {
+  @include flex(center, center, wrap);
+  flex-direction: column;
+  width: 100%;
+  &__hdl {
+    color: $font-color;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: px-to-rem(30px);
+    margin-top: px-to-rem(50px);
+    margin-bottom: 0;
+    text-align: center;
+  }
+}

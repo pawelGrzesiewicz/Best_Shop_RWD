@@ -258,6 +258,25 @@ html, body {
   text-decoration: none;
 }
 
+.statistics {
+  flex-direction: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.statistics__hdl {
+  color: #000;
+  text-align: center;
+  margin-top: 3.125rem;
+  margin-bottom: 0;
+  font-family: Raleway, sans-serif;
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
 .logo {
   color: #08a6e4;
   padding-top: 1rem;
@@ -363,6 +382,35 @@ html, body {
   position: absolute;
   left: .375rem;
   transform: rotate(-45deg);
+}
+
+.items {
+  margin-top: 1.5625rem;
+}
+
+.items .item {
+  flex-direction: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.items .item .graph {
+  display: flex;
+  position: relative;
+}
+
+.items .item .graph__circle {
+  background-color: red;
+  border-radius: 50%;
+  width: 3.91938rem;
+  height: 3.91938rem;
+}
+
+.items .item .graph__img {
+  position: absolute;
+  left: 1.95938rem;
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */
