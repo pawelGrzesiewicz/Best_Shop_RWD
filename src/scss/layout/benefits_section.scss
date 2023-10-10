@@ -1,0 +1,11 @@
+@import "../variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+.benefits {
+  background-color: $grey-color;
+  @include flex(center, center);
+  &__inner {
+    max-width: px-to-rem(314px);
+  }
+}
