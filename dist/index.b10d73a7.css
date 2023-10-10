@@ -185,6 +185,10 @@ template, [hidden] {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   font-size: 16px;
 }
@@ -288,6 +292,28 @@ html, body {
 
 .benefits__inner {
   max-width: 19.625rem;
+}
+
+.pricing {
+  flex-direction: nowrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.pricing__inner {
+  max-width: 19.625rem;
+}
+
+.pricing__inner--hdl {
+  color: #000;
+  justify-content: center;
+  margin-top: 3.33375rem;
+  margin-bottom: .875rem;
+  font-family: Raleway, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  display: flex;
 }
 
 .logo {
@@ -558,6 +584,66 @@ html, body {
   position: absolute;
   top: .75rem;
   left: 5.625rem;
+}
+
+.pricing__boxes .frame {
+  flex-direction: nowrap;
+  border-radius: 1.125rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15.6875rem;
+  margin-bottom: 4.1875rem;
+  display: flex;
+  position: relative;
+}
+
+.pricing__boxes .frame__basic {
+  border: .0625rem solid #fb3b64;
+}
+
+.pricing__boxes .frame__professional {
+  border: .0625rem solid #08a6e4;
+}
+
+.pricing__boxes .frame__premium {
+  border: .0625rem solid #55dfb4;
+}
+
+.pricing__boxes .frame .dsc {
+  flex-direction: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.pricing__boxes .frame .dsc__offer {
+  color: 16px;
+  font-family: Raleway, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.pricing__boxes .frame__btn {
+  width: 9.375rem;
+  height: 3.125rem;
+  padding: 1rem 3.5625rem;
+  position: absolute;
+  top: 14.0625rem;
+  left: calc(50% - 75px);
+}
+
+.pricing__boxes .frame__btn--red {
+  background-color: #fb3b64;
+}
+
+.pricing__boxes .frame__btn--blue {
+  background-color: #08a6e4;
+}
+
+.pricing__boxes .frame__btn--green {
+  background-color: #55dfb4;
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */
