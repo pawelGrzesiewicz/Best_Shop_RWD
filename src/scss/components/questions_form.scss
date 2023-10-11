@@ -1,0 +1,111 @@
+@import "../variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+.contact {
+  &__hdl {
+    font-size: px-to-rem(40px);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: $font-color;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  &__dsc {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: $font-color;
+    margin-bottom: px-to-rem(15px);
+    margin-top: px-to-rem(5px);
+    height: px-to-rem(45px);
+  }
+  .info {
+
+    .inner {
+      @include flex(flex-start, center);
+      margin-bottom: px-to-rem(16px);
+      max-height: px-to-rem(27px);
+
+      &__img {
+        margin-right: px-to-rem(7.69px);
+      }
+
+      &__dsc {
+        margin-top: px-to-rem(16px);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        color: #A5A5A5;
+        height: px-to-rem(22px);
+
+      }
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  &__label {
+    font-family: " Open Sans", sans-serif;
+    font-size: px-to-rem(11px);
+    font-weight: 700;
+    color:$base-color;
+    letter-spacing: px-to-rem(3.28px);
+    margin-top: px-to-rem(37px);
+    margin-bottom: 0;
+  }
+  &__in {
+    border: none;
+    border-bottom: solid px-to-rem(1px) #95989A;
+    height: px-to-rem(41.98px);
+  }
+  .check {
+    @include flex(center, flex-start);
+    position: relative;
+    &__form {
+      left: 0;
+      position: absolute;
+      width: px-to-rem(24px);
+      height: px-to-rem(24px);
+      border: 1px solid #95989A;
+      border-radius: px-to-rem(4px);
+      margin-top: px-to-rem(31px);
+      padding: px-to-rem(11px);
+
+      &--img {
+        position: absolute;
+        opacity: 0;
+        width: px-to-rem(14px);
+        height: px-to-rem(24px);
+        left: px-to-rem(5px);
+        top: px-to-rem(0px);
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    &__dsc {
+      color: #707070;
+      font-size: px-to-rem(12px);
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      margin-top: px-to-rem(31px);
+      margin-left: px-to-rem(34px);
+      margin-bottom: 0;
+    }
+  }
+  &__btn {
+    width: px-to-rem(226px);
+    height: px-to-rem(57px);
+    font-size: px-to-rem(13px);
+    font-weight: 700;
+    background-color: $base-color;
+    padding: px-to-rem(19px) px-to-rem(97px);
+    margin-top: px-to-rem(21px);
+    margin-bottom: 0;
+    margin-left:px-to-rem(90px) ;
+    border-radius: px-to-rem(35px);
+    box-shadow: px-to-rem(5px) px-to-rem(10px) px-to-rem(14px) #07ACE629;
+  }
+}

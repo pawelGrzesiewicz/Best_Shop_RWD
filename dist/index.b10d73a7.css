@@ -316,6 +316,16 @@ html, body {
   display: flex;
 }
 
+.questions__inner {
+  flex-direction: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 19.75rem;
+  margin-inline: auto;
+  display: flex;
+}
+
 .logo {
   color: #08a6e4;
   padding-top: 1rem;
@@ -700,6 +710,122 @@ html, body {
 
 .pricing__boxes .frame__btn--green {
   background-color: #55dfb4;
+}
+
+.contact__hdl {
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Raleway, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.contact__dsc {
+  color: #000;
+  height: 2.8125rem;
+  margin-top: .3125rem;
+  margin-bottom: .9375rem;
+  font-family: Open Sans, sans-serif;
+  font-weight: 400;
+}
+
+.contact .info .inner {
+  flex-direction: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: 1.6875rem;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.contact .info .inner__img {
+  margin-right: .480625rem;
+}
+
+.contact .info .inner__dsc {
+  color: #a5a5a5;
+  height: 1.375rem;
+  margin-top: 1rem;
+  font-family: Open Sans, sans-serif;
+  font-weight: 400;
+}
+
+.form {
+  flex-direction: column;
+  display: flex;
+}
+
+.form__label {
+  color: #08a6e4;
+  letter-spacing: .205rem;
+  margin-top: 2.3125rem;
+  margin-bottom: 0;
+  font-family:  Open Sans, sans-serif;
+  font-size: .6875rem;
+  font-weight: 700;
+}
+
+.form__in {
+  border: none;
+  border-bottom: .0625rem solid #95989a;
+  height: 2.62375rem;
+}
+
+.form .check {
+  flex-direction: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+  position: relative;
+}
+
+.form .check__form {
+  border: 1px solid #95989a;
+  border-radius: .25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 1.9375rem;
+  padding: .6875rem;
+  position: absolute;
+  left: 0;
+}
+
+.form .check__form--img {
+  opacity: 0;
+  width: .875rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: .3125rem;
+}
+
+.form .check__form--img:hover {
+  opacity: 1;
+}
+
+.form .check__dsc {
+  color: #707070;
+  margin-top: 1.9375rem;
+  margin-bottom: 0;
+  margin-left: 2.125rem;
+  font-family: Open Sans, sans-serif;
+  font-size: .75rem;
+  font-weight: 400;
+}
+
+.form__btn {
+  background-color: #08a6e4;
+  border-radius: 2.1875rem;
+  width: 14.125rem;
+  height: 3.5625rem;
+  margin-top: 1.3125rem;
+  margin-bottom: 0;
+  margin-left: 5.625rem;
+  padding: 1.1875rem 6.0625rem;
+  font-size: .8125rem;
+  font-weight: 700;
+  box-shadow: .3125rem .625rem .875rem #07ace629;
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */
