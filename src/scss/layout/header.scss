@@ -8,12 +8,14 @@
   box-shadow: 0 px-to-rem(3px) px-to-rem(6px) #00000029;
   width: 100%;
   @include flex(center, center);
+  position: relative;
+  z-index: 42;
+  background-color: #FFFFFF;
 
     &__inner {
       padding-inline: px-to-rem(25px);
       box-sizing: border-box;
       @include flex(space-between, center);
-      position: relative;
       width: px-to-rem(1352px);
     }
   }
@@ -26,7 +28,7 @@
     font-size: px-to-rem(49px);
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    margin-top: px-to-rem(130px);
+    margin-top: px-to-rem(100px);
     margin-bottom: 0;
   }
   &__dsc{
@@ -35,6 +37,7 @@
     color: $font-color;
     margin-top: px-to-rem(20px);
     margin-bottom: 0;
+    padding-inline: px-to-rem(50px);
   }
   &__btn {
     background-color: $base-color;
