@@ -1039,6 +1039,10 @@ html, body {
   display: flex;
 }
 
+.calc__summary ul {
+  margin-top: 0;
+}
+
 @media (width <= 1024px) {
   .calc__summary {
     width: 100%;
@@ -1075,7 +1079,7 @@ html, body {
 }
 
 .calc__summary .list__item {
-  background-color: #f7f7f7;
+  background-color: #55dfb4;
   margin-bottom: 8px;
   padding: .4375rem 1.25rem;
 }
