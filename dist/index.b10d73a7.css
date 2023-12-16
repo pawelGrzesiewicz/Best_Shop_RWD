@@ -1017,6 +1017,13 @@ html, body {
 }
 
 .calc__select.open .select__dropdown {
+  color: #000;
+  margin-top: 0;
+  padding-left: 0;
+  font-family: Open Sans, sans-serif;
+  font-size: .8125rem;
+  font-weight: 400;
+  list-style: none;
   display: block;
 }
 
