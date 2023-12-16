@@ -1,3 +1,4 @@
+@use "sass:map";
 @import "../variables";
 
 @mixin flex($horizontal: flex-start, $vertical: flex-start, $wrap: nowrap) {
@@ -30,6 +31,20 @@
 
 @mixin tablet {
   @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+
+@mixin mq($bp) {
+  $width: map.get($grid-breakpoints, $bp);
+
+  @if not map.has-key($grid-breakpoints, $bp) {
+    @warn 'Klucza: #{$bp} nie ma w mapie breakpointów. Wybierz jeden z tych: xs, sm, md, lg, xl, xxl. Domyślnie ustawiam xs';
+    $width: xs;
+  }
+
+  @media screen and (min-width: $width) {
     @content;
   }
 }

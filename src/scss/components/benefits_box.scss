@@ -2,94 +2,139 @@
 @import "../helpers/functions";
 @import "../helpers/mixins";
 
-.box {
-  background-color: $btn-color;
-  border-radius: px-to-rem(5px);
-  border: px-to-rem(1px) solid #E8E9ED;
-  margin-top: px-to-rem(41px);
-  margin-bottom: 0;
-  &:first-child {
+.benefits__inner {
+  @include flex(center, center);
+  flex-direction: column;
+  margin-top: px-to-rem(64px);
+
+  .box {
+    background-color: $btn-color;
+    border-radius: px-to-rem(5px);
+    border: px-to-rem(1px) solid #E8E9ED;
+    margin-top: px-to-rem(41px);
+    margin-bottom: 0;
     display: flex;
-    flex-direction: column-reverse;
-  }
-  &:nth-child(2) {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  &:last-child {
-    margin-bottom: px-to-rem(44.66px);
-  }
 
-
-  .title {
-    &__hdl {
-      font-family: 'Raleway', sans-serif;
-      font-size: px-to-rem(30px);
-      font-weight: 400;
-      color: $font-color;
-      margin-top: px-to-rem(26px);
-      margin-bottom: 0;
-      margin-inline: px-to-rem(21px);
+    @include mq(xl) {
+      width: px-to-rem(1124px);
+      height: px-to-rem(370px);
     }
-    &__dsc {
-      font-family: 'Open Sans', sans-serif;
-      font-size: px-to-rem(14px);
-      font-weight: 400;
-      color: $font-color;
-      margin-top: px-to-rem(10px);
-      margin-bottom: px-to-rem(30px);
-      margin-inline: px-to-rem(21px);
-    }
-  }
-  .graph {
-    display: flex;
-    position: relative;
-    &--desc {
-      background-color: $green-color;
-      height: px-to-rem(195px);
-      width: 100%;
-      border-radius: px-to-rem(5px);
-      border: px-to-rem(1px) solid #E8E9ED;
 
-    }
-    &__img {
-      padding-top: px-to-rem(37.11px);
-      z-index: 10;
-      &--first {
-        margin-inline: px-to-rem(55.27px);
-
-      }
-      &--second {
-        margin-left:  px-to-rem(90px);
-        margin-top: px-to-rem(-19px);
-      }
-      &--third {
-        position: absolute;
-        left: px-to-rem(-12px);
+    &:first-child {
+      flex-direction: column-reverse;
+      @include mq(xl) {
+        flex-direction: row;
       }
     }
-    &__shape {
-      &--red {
-        width: px-to-rem(90.12px);
-        height: px-to-rem(90.12px);
-        background-color: $red-color;
-        border-radius: 45%;
-        transform: rotate(45deg);
-        position: absolute;
-        top: px-to-rem(18.5px);
-        left: px-to-rem(161.5px);
+
+    &:nth-child(2) {
+      flex-direction: column-reverse;
+      @include mq(xl) {
+        flex-direction: row-reverse;
       }
-      &--blue {
-        width: px-to-rem(132px);
-        height: px-to-rem(132px);
-        background-color: $base-color;
-        border-radius: 50%;
-        position: absolute;
-        top: px-to-rem(12px);
-        left: px-to-rem(90px);
+    }
+
+    &:last-child {
+      flex-direction: column;
+      margin-bottom: px-to-rem(44.66px);
+    }
+
+    .title {
+      &__hdl {
+        font-family: 'Raleway', sans-serif;
+        font-size: px-to-rem(30px);
+        font-weight: 400;
+        color: $font-color;
+        margin-top: px-to-rem(26px);
+        margin-bottom: 0;
+        margin-inline: px-to-rem(21px);
+
+        @include mq(xl) {
+          width: px-to-rem(240px);
+        }
+
+          &:last-child {
+            @include mq(xl) {
+              width: px-to-rem(600px);
+            }
+          }
+      }
+
+        &__dsc {
+          font-family: 'Open Sans', sans-serif;
+          font-size: px-to-rem(14px);
+          font-weight: 400;
+          color: $font-color;
+          margin-top: px-to-rem(10px);
+          margin-bottom: px-to-rem(30px);
+          margin-inline: px-to-rem(21px);
+        }
+
+        @include mq(xl) {
+          margin-top: px-to-rem(65px);
+          margin-inline: px-to-rem(36px);
+          width: px-to-rem(416px);
+        }
+    }
+
+    .graph {
+      display: flex;
+      position: relative;
+
+      &--desc {
+        background-color: $green-color;
+        height: px-to-rem(195px);
+        width: 100%;
+        border-radius: px-to-rem(5px);
+        border: px-to-rem(1px) solid #E8E9ED;
 
       }
-      &--green {
+
+      &__img {
+        padding-top: px-to-rem(37.11px);
+        z-index: 10;
+
+        &--first {
+          margin-inline: px-to-rem(55.27px);
+
+        }
+
+        &--second {
+          margin-left: px-to-rem(90px);
+          margin-top: px-to-rem(-19px);
+        }
+
+        &--third {
+          position: absolute;
+          left: px-to-rem(-12px);
+        }
+      }
+
+      &__shape {
+        &--red {
+          width: px-to-rem(90.12px);
+          height: px-to-rem(90.12px);
+          background-color: $red-color;
+          border-radius: 45%;
+          transform: rotate(45deg);
+          position: absolute;
+          top: px-to-rem(18.5px);
+          left: px-to-rem(161.5px);
+        }
+
+        &--blue {
+          width: px-to-rem(132px);
+          height: px-to-rem(132px);
+          background-color: $base-color;
+          border-radius: 50%;
+          position: absolute;
+          top: px-to-rem(12px);
+          left: px-to-rem(90px);
+
+        }
+
+        &--green {
+        }
       }
     }
   }

@@ -3,19 +3,28 @@
 @import "../variables";
 
 .items {
+  margin-bottom: px-to-rem(50px);
+  margin-top: px-to-rem(28px);
+  @include mq(md) {
+    display: flex;
+    margin-bottom: px-to-rem(122px);
+    margin-top: px-to-rem(100px);
+  }
 
   .item {
     @include flex(center, center, wrap);
     width: 100%;
-    display: flex;
     flex-direction: column;
     margin-top: px-to-rem(25px);
     margin-bottom: 0;
     max-width: px-to-rem(116px);
     text-align: center;
+    @include mq(sm) {
+        margin: 0 px-to-rem(80px) ;
+    }
 
     &:last-child {
-      margin-bottom: px-to-rem(50px);
+
     }
 
     .graph {

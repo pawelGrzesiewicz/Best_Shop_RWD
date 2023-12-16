@@ -32,7 +32,7 @@
     width: 50%;
     margin-right: px-to-rem(20px);
 
-    @include tablet {
+    @include mq(md) {
       width: 100%;
       margin-right: 0;
     }

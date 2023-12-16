@@ -9,3 +9,13 @@ $green-color: #55DFB4;
 $grey-color: #F7F7F7;
 $color-light-grey: #F7F7F7;
 $color-white: #FFFFFF;
+
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
