@@ -2,7 +2,9 @@
 @import "../helpers/functions";
 @import "../helpers/mixins";
 
+
 .calc {
+  display: none;
   padding: px-to-rem(80px) 0;
   background-color: $color-light-grey;
 
@@ -193,4 +195,8 @@
       }
     }
   }
+}
+
+.calc-active{
+  display: block;
 }

@@ -111,6 +111,8 @@
       height: px-to-rem(50px);
       padding: px-to-rem(16px) px-to-rem(57px);
       font-size: px-to-rem(13px);
+      cursor: pointer;
+      border: none;
 
       @include mq(xl) {
         top: px-to-rem(435px);

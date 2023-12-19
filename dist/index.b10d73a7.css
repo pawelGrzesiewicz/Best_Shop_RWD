@@ -979,6 +979,8 @@ html, body {
 }
 
 .pricing__boxes .frame__btn {
+  cursor: pointer;
+  border: none;
   width: 9.375rem;
   height: 3.125rem;
   padding: 1rem 3.5625rem;
@@ -1197,6 +1199,7 @@ html, body {
 .calc {
   background-color: #f7f7f7;
   padding: 5rem 0;
+  display: none;
 }
 
 @media (width <= 1024px) {
@@ -1382,6 +1385,10 @@ html, body {
 .calc__summary .list__item .item__price {
   font-size: 1.125rem;
   font-weight: 700;
+}
+
+.calc-active {
+  display: block;
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */
