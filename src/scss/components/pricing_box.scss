@@ -1,0 +1,130 @@
+@import "../variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+.pricing__boxes {
+  @include mq(xl) {
+    @include flex(center, center);
+    gap: px-to-rem(52px);
+    margin-top: px-to-rem(71px);
+  }
+  .frame {
+    @include flex(center, center);
+    border-radius: px-to-rem(18px);
+    margin-bottom: px-to-rem(120px);
+    height: px-to-rem(251px);
+    width: 100%;
+    position: relative;
+    padding: px-to-rem(11px);
+
+    @include mq(xl) {
+      height: px-to-rem(461px);
+
+      @include flex(space-between, center, column);
+      padding: 0;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all 200ms ease-in-out;
+    }
+
+    &__basic {
+      border: px-to-rem(1px) solid $red-color;
+      &:hover {
+        box-shadow: px-to-rem(5px) px-to-rem(10px) px-to-rem(27px) #FEEBEF;
+      }
+    }
+    &__professional {
+      border: px-to-rem(1px) solid $base-color;
+      &:hover {
+        box-shadow: px-to-rem(5px) px-to-rem(10px) px-to-rem(27px) #07ACE629;
+      }
+    }
+    &__premium {
+      border: px-to-rem(1px) solid $green-color;
+      &:hover {
+        box-shadow: px-to-rem(5px) px-to-rem(10px) px-to-rem(27px) #CCF5E8;
+      }
+    }
+    .dsc {
+      @include flex(center, center);
+      flex-direction: column;
+      &__offer {
+        font-family: 'Raleway', sans-serif;
+        font-size: px-to-rem(20px);
+        font-weight: 700;
+        color: $base-font-size;
+        @include mq(xl) {
+          margin-top: px-to-rem(34px);
+        }
+      }
+      &__price {
+        font-family: 'Open Sans', sans-serif;
+        font-size: px-to-rem(46px);
+        font-weight: 300;
+        @include mq(xl) {
+          margin-top: px-to-rem(14px);
+          margin-bottom: px-to-rem(19px);
+        }
+        &--red {
+          color: $red-color;
+        }
+        &--blue {
+          color: $base-color;
+        }
+        &--green {
+          color: $green-color;
+        }
+      }
+      &__limited {
+        font-family: 'Raleway', sans-serif;
+        font-size: px-to-rem(12px);
+        font-weight: 700;
+        color: $font-color;
+      }
+    }
+
+    .list {
+      @include mq(xl) {
+        @include flex(center, center, column);
+        width: px-to-rem(372px);
+        padding: 0;
+        margin-bottom: px-to-rem(81px);
+      }
+      &__item {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: px-to-rem(14px);
+        list-style: none;
+        margin-bottom: px-to-rem(20px);
+        img {
+          margin-right: px-to-rem(10px);
+        }
+      }
+    }
+    &__btn {
+      position: absolute;
+      left: calc(50% - 75px);
+      top: px-to-rem(225px);
+      width: px-to-rem(150px);
+      height: px-to-rem(50px);
+      padding: px-to-rem(16px) px-to-rem(57px);
+      font-size: px-to-rem(13px);
+
+      @include mq(xl) {
+        top: px-to-rem(435px);
+      }
+
+      &--red {
+        background-color: $red-color;
+      }
+      &--blue {
+        background-color: $base-color;
+      }
+      &--green {
+        background-color: $green-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+@import "../variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+.calc {
+  padding: px-to-rem(80px) 0;
+  background-color: $color-light-grey;
+
+  @include tablet {
+    padding: px-to-rem(30px) px-to-rem(15px);
+  }
+
+  h2 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: px-to-rem(36px);
+    font-weight: 400;
+    margin-top: px-to-rem(7px);
+  }
+
+  &__columns {
+    max-width: px-to-rem(856px);
+    margin: px-to-rem(50px) auto 0;
+    display: flex;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__form {
+    width: 50%;
+    margin-right: px-to-rem(20px);
+
+    @include mq(md) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+
+  &__input input,
+  &__select .select__input {
+    color: #A5A5A5;
+    width: 100%;
+    border-radius: px-to-rem(6px);
+    border: px-to-rem(1px) solid $base-color;
+    padding: px-to-rem(11px) px-to-rem(20px);
+    line-height: 1em;
+    font-size: px-to-rem(13px);
+    box-shadow: 0 px-to-rem(3px) px-to-rem(6px) #00000029;
+    margin-bottom: 20px;
+    background-color: $color-white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+  }
+
+  &__input {
+    input {
+      &::placeholder {
+        color: #A5A5A5;
+      }
+    }
+  }
+
+  &__select {
+    position: relative;
+
+    .select__input {
+      position: relative;
+      height: px-to-rem(40px);
+      vertical-align: middle;
+      padding: px-to-rem(13px) px-to-rem(20px);
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        background-image: url("../images/Arrow Down.svg");
+        width: px-to-rem(22px);
+        height: px-to-rem(22px);
+        display: block;
+        position: absolute;
+        right: px-to-rem(14px);
+        top: px-to-rem(9px);
+      }
+    }
+
+    .select__dropdown {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      background-color: white;
+      width: 100%;
+      border-radius: px-to-rem(6px);
+      border: px-to-rem(1px) solid $red-color;
+      overflow: hidden;
+
+      li {
+        font-size: px-to-rem(13px);
+        padding: px-to-rem(10px) px-to-rem(20px);
+        cursor: pointer;
+
+        &:hover {
+          background-color: $color-light-grey;
+        }
+      }
+    }
+
+
+    &.open {
+      .select__input::after {
+        transform: rotate(180deg);
+      }
+
+      .select__dropdown {
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: px-to-rem(13px);
+        font-weight: 400;
+        color: $font-color;
+        list-style: none;
+        margin-top: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .form__checkbox {
+    display: flex;
+    .consent__text {
+      margin-left: px-to-rem(10px);
+      font-family: 'Open Sans', sans-serif;
+      font-size: px-to-rem(12px);
+      font-weight: 400;
+      color: #707070;
+    }
+  }
+
+  &__summary {
+    width: 50%;
+    margin-left: px-to-rem(20px);
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      margin-top: 0;
+    }
+
+    @include tablet {
+      width: 100%;
+      margin-left: 0;
+      margin-top: px-to-rem(30px);
+    }
+
+    .summary__total,
+    .list__item {
+      box-shadow: 0 px-to-rem(3px) px-to-rem(6px) rgba(0, 0, 0, .16);
+      border-radius: px-to-rem(6px);
+      justify-content: space-between;
+      align-items: center;
+      color: $color-white;
+      font-size: 0.875rem;
+      display: none;
+
+      &.open {
+        display: flex;
+      }
+    }
+
+    .summary__total {
+      width: 50%;
+      align-self: flex-end;
+      margin-top: px-to-rem(22px);
+      padding: px-to-rem(8px) px-to-rem(20px);
+      background-color: $base-color;
+
+      .total__price {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+    }
+
+    .list__item {
+      padding: px-to-rem(7px) px-to-rem(20px);
+      background-color: $green-color;
+      margin-bottom: 8px;
+
+      .item {
+        &__price {
+          font-weight: 700;
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+}

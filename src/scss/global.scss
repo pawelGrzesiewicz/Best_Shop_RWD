@@ -1,0 +1,9 @@
+@import "./variables";
+@import "./helpers/functions";
+
+*{
+  box-sizing: border-box;
+}
+html, body {
+  font-size: $base-font-size;
+}

@@ -1,0 +1,86 @@
+@import "../helpers/mixins";
+@import "../helpers/functions";
+@import "../variables";
+
+.items {
+  margin-bottom: px-to-rem(50px);
+  margin-top: px-to-rem(28px);
+  @include mq(md) {
+    display: flex;
+    margin-bottom: px-to-rem(122px);
+    margin-top: px-to-rem(100px);
+  }
+
+  .item {
+    @include flex(center, center, wrap);
+    width: 100%;
+    flex-direction: column;
+    margin-top: px-to-rem(25px);
+    margin-bottom: 0;
+    max-width: px-to-rem(116px);
+    text-align: center;
+    @include mq(sm) {
+        margin: 0 px-to-rem(80px);
+    }
+
+    &:last-child {
+
+    }
+
+    .graph {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      left: px-to-rem(-7px);
+
+        &__circle {
+          width: px-to-rem(62.71px);
+          height: px-to-rem(62.71px);
+          background-color: gray;
+          border-radius: 50%;
+
+        &--1 {
+          background-color: $red-color;
+        }
+
+        &--2 {
+          background-color: $base-color;
+        }
+
+        &--3 {
+          background-color: $green-color;
+        }
+    }
+
+    &__img {
+      position: absolute;
+      left: px-to-rem(31.355px);
+      margin-bottom: 0;
+    }
+  }
+
+    &__hdl {
+      position: relative;
+      margin-top: px-to-rem(14.18px);
+      margin-bottom: 0;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 800;
+      letter-spacing: px-to-rem(5.96px);
+      color: $font-color;
+      font-size: px-to-rem(20px);
+      max-width: px-to-rem(116px);
+    }
+
+    &__dsc {
+      display: flex;
+      position: relative;
+      margin-top: px-to-rem(19.11px);
+      margin-bottom: 0;
+      color: #A5A5A5;
+      font-size: px-to-rem(17px);
+      font-weight: 400;
+      font-family: 'Raleway', sans-serif;
+    }
+  }
+}

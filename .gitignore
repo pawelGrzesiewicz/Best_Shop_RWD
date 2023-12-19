@@ -1,0 +1,7 @@
+.idea
+.vscode
+
+node_modules
+/.parcel-cache/
+.DS_Stroe
+/dist/

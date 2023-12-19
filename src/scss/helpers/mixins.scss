@@ -1,0 +1,50 @@
+@use "sass:map";
+@import "../variables";
+
+@mixin flex($horizontal: flex-start, $vertical: flex-start, $wrap: nowrap) {
+  display: flex;
+  justify-content: $horizontal;
+  align-items: $vertical;
+  flex-direction: $wrap;
+}
+
+@mixin link($color, $bg-color) {
+  &:link {
+    @content;
+  }
+
+  &:visited {
+    @content;
+  }
+
+  &:hover, &--current {
+    @content;
+    color: $color;
+    background-color: $bg-color;
+  }
+
+  &:active {
+    @content
+  }
+}
+
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+
+@mixin mq($bp) {
+  $width: map.get($grid-breakpoints, $bp);
+
+  @if not map.has-key($grid-breakpoints, $bp) {
+    @warn 'Klucza: #{$bp} nie ma w mapie breakpointów. Wybierz jeden z tych: xs, sm, md, lg, xl, xxl. Domyślnie ustawiam xs';
+    $width: xs;
+  }
+
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}

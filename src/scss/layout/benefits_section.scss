@@ -1,0 +1,16 @@
+@import "../variables";
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+.benefits {
+  background-color: $grey-color;
+  @include flex(center, center);
+  &__inner {
+    max-width: px-to-rem(314px);
+    @include mq(xl) {
+      @include flex(center, center);
+      flex-direction: column;
+      margin-top: px-to-rem(64px);
+    }
+  }
+}

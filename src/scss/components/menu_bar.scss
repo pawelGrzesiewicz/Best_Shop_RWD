@@ -1,0 +1,28 @@
+@import "../helpers/functions";
+@import "../helpers/mixins";
+@import "../variables";
+
+.menu {
+  background-color: #FFFFFF;
+  position: absolute;
+  top: px-to-rem(60px);
+  width: 100%;
+  box-shadow: 0 px-to-rem(3px) px-to-rem(6px) #00000029;
+  display: flex;
+  flex-direction: column;
+  height: px-to-rem(175.68px);
+  padding-bottom: px-to-rem(26.65px);
+  padding-top: px-to-rem(33px);
+  &__item {
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: px-to-rem(11px);
+    font-weight: 700;
+    color: #A5A5A5;
+    letter-spacing: px-to-rem(3.28px);
+    padding: px-to-rem(7px) px-to-rem(25px);
+    &:hover {
+      color: $font-color;
+    }
+  }
+}

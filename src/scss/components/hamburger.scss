@@ -1,0 +1,64 @@
+@import "../helpers/functions";
+@import "../helpers/mixins";
+
+.hamburger{
+  width: px-to-rem(20px);
+  height: px-to-rem(12px);
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  right: px-to-rem(30px);
+  z-index: 42;
+  @include mq(xl){
+    display: none;
+  }
+  &__icon {
+    width: 100%;
+    height: px-to-rem(2px);
+    background-color: $base-color;
+    display: inline-block;
+    transition: all 200ms ease-in-out;
+    position: absolute;
+    &:first-child {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 45%;
+    }
+    &:last-child {
+      bottom: 0;
+    }
+  }
+}
+
+
+.hamburger__select {
+  width: px-to-rem(20px);
+  height: px-to-rem(12px);
+  right: px-to-rem(30px);
+  z-index: 2137;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+
+  &:checked + .hamburger .hamburger__icon {
+    &:first-child {
+      transform: rotate(45deg);
+      transform-origin: top left;
+      width: px-to-rem(70px);
+      position: absolute;
+      left: px-to-rem(6px)
+    }
+    &:nth-child(2) {
+      transform: translateX(-100%);
+    }
+    &:last-child {
+      transform: rotate(-45deg);
+      transform-origin: bottom left;
+      width: px-to-rem(70px);
+      position: absolute;
+      left: px-to-rem(6px)
+    }
+  }
+}
