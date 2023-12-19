@@ -3,8 +3,8 @@
   "version": "2.0.0",
   "source": "./index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel --log-level verbose",
+    "build": "NODE_OPTIONS='--max_old_space_size=4096' parcel build --log-level verbose"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
