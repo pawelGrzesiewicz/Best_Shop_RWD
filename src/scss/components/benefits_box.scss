@@ -2,11 +2,6 @@
 @import "../helpers/functions";
 @import "../helpers/mixins";
 
-.benefits__inner {
-  @include flex(center, center);
-  flex-direction: column;
-  margin-top: px-to-rem(64px);
-
   .box {
     background-color: $btn-color;
     border-radius: px-to-rem(5px);
@@ -37,6 +32,16 @@
     &:last-child {
       flex-direction: column;
       margin-bottom: px-to-rem(44.66px);
+      @include mq(xl) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: px-to-rem(105px);
+        background-color: $grey-color;
+        border-radius: 0;
+        border: none;
+      }
     }
 
     .title {
@@ -48,16 +53,13 @@
         margin-top: px-to-rem(26px);
         margin-bottom: 0;
         margin-inline: px-to-rem(21px);
+        max-width: px-to-rem(300px);
 
         @include mq(xl) {
-          width: px-to-rem(240px);
+          font-size: px-to-rem(36px);
+          margin-top: 0;
+          margin-inline: 0;
         }
-
-          &:last-child {
-            @include mq(xl) {
-              width: px-to-rem(600px);
-            }
-          }
       }
 
         &__dsc {
@@ -68,40 +70,106 @@
           margin-top: px-to-rem(10px);
           margin-bottom: px-to-rem(30px);
           margin-inline: px-to-rem(21px);
+          position: relative;
+
+          @include mq(xl) {
+            margin-top: px-to-rem(30px);
+            font-size: px-to-rem(16px);
+            margin-inline: 0;
+            margin-bottom: 0;
+
+          }
+        }
+
+      @include mq(xl) {
+        width: 50%;
+        margin-top: px-to-rem(91px);
+        margin-inline: px-to-rem(36px);
+      }
+
+      &__line {
+        display: none;
+        width: px-to-rem(327px);
+        height: px-to-rem(4px);
+        margin-top: px-to-rem(50px);
+
+        &--red {
+          background-color: $red-color;
+        }
+
+        &--blue  {
+          background-color: $base-color;
+        }
+
+        &--green {
+          background-color: $green-color;
         }
 
         @include mq(xl) {
-          margin-top: px-to-rem(65px);
-          margin-inline: px-to-rem(36px);
-          width: px-to-rem(416px);
+          display: block;
         }
+      }
     }
+
+    @include mq(xl) {
+      .title--last {
+        background-color: $btn-color;
+        border-radius: px-to-rem(5px);
+        border: px-to-rem(1px) solid #E8E9ED;
+        width: px-to-rem(623px);
+        height: px-to-rem(370px);
+        margin-top: 0;
+        margin-inline: 0;
+        padding-top: px-to-rem(91px);
+        padding-inline: px-to-rem(36px);
+        .title__hdl {
+          max-width: px-to-rem(400px);
+        }
+      }
+    }
+
 
     .graph {
       display: flex;
       position: relative;
 
-      &--desc {
+      &--last {
         background-color: $green-color;
+        width: px-to-rem(314px);
         height: px-to-rem(195px);
-        width: 100%;
         border-radius: px-to-rem(5px);
         border: px-to-rem(1px) solid #E8E9ED;
 
+        @include mq(xl) {
+          width: px-to-rem(440px);
+          height: px-to-rem(370px);
+        }
       }
 
       &__img {
         padding-top: px-to-rem(37.11px);
+        width: px-to-rem(192.76px);
         z-index: 10;
 
         &--first {
           margin-inline: px-to-rem(55.27px);
-
+          @include mq(xl) {
+            width: px-to-rem(386px);
+            padding-top: px-to-rem(113px) ;
+            padding-bottom: px-to-rem(36px);
+            margin: 0;
+          }
         }
 
         &--second {
           margin-left: px-to-rem(90px);
           margin-top: px-to-rem(-19px);
+          @include mq(xl) {
+            width: px-to-rem(426px);
+            margin-top: px-to-rem(29px) ;
+            margin-left: 0;
+            padding: 0;
+          }
         }
 
         &--third {
@@ -120,6 +188,14 @@
           position: absolute;
           top: px-to-rem(18.5px);
           left: px-to-rem(161.5px);
+
+          @include mq(xl) {
+            width: px-to-rem(190px);
+            height: px-to-rem(190px);
+            border-radius: px-to-rem(41px);
+            top: px-to-rem(65px);
+            left: px-to-rem(210px);
+          }
         }
 
         &--blue {
@@ -131,6 +207,13 @@
           top: px-to-rem(12px);
           left: px-to-rem(90px);
 
+          @include mq(xl) {
+            width: px-to-rem(320px);
+            height: px-to-rem(320px);
+            top: px-to-rem(12px);
+            left: 0;
+          }
+
         }
 
         &--green {
@@ -138,4 +221,3 @@
       }
     }
   }
-}

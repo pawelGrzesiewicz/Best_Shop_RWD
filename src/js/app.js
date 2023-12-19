@@ -1,10 +1,9 @@
-const formRefs = document.querySelector('.calc__form');
+const formRef = document.querySelector('.calc__form');
 const selectRef = document.getElementById('package');
 const dropdownRef = document.querySelector('.calc__select');
 const itemsRefs = document.querySelectorAll('.select__dropdown li');
 
 console.log(dropdownRef);
-
 
 function doAwesomeThings(items, target) {
     items.classList.add('open');
@@ -14,7 +13,7 @@ function doAwesomeThings(items, target) {
     items.querySelector('.item__price').textContent = `$${price}`;
 }
 
-formRefs.addEventListener("input", (event) => {
+formRef.addEventListener("input", (event) => {
     const target = event.target;
     const products = document.querySelector('[data-id="products"]');
     const orders = document.querySelector('[data-id="orders"]');

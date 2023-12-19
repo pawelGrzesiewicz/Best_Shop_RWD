@@ -6,6 +6,9 @@
   @include flex(center, center);
   &__inner {
     max-width: px-to-rem(314px);
+    @include mq(xl) {
+      width: 100%;
+    }
     &--hdl {
       display: flex;
       justify-content: center;

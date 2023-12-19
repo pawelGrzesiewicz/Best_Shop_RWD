@@ -20,7 +20,7 @@
     max-width: px-to-rem(116px);
     text-align: center;
     @include mq(sm) {
-        margin: 0 px-to-rem(80px) ;
+        margin: 0 px-to-rem(80px);
     }
 
     &:last-child {

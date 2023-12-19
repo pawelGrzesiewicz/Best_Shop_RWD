@@ -1,16 +1,15 @@
 @import "../helpers/functions";
 @import "../helpers/mixins";
 @import "../variables";
-@import "../media_queries";
-
 
 .header {
   box-shadow: 0 px-to-rem(3px) px-to-rem(6px) #00000029;
   width: 100%;
   @include flex(center, center);
-  position: relative;
   z-index: 42;
   background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
 
     &__inner {
       padding-inline: px-to-rem(25px);

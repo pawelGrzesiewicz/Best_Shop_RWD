@@ -2,10 +2,10 @@
 @import "../helpers/mixins";
 
 .navigation {
-
   @include flex(flex-end);
-  @media screen and (max-width: px-to-rem(860px)) {
-    display: none;
+  display: none;
+  @include mq(xl) {
+    display: block;
   }
   &__item {
     font-family: "Open Sans", sans-serif;

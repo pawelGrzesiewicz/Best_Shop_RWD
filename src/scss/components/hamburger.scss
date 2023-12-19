@@ -1,4 +1,5 @@
 @import "../helpers/functions";
+@import "../helpers/mixins";
 
 .hamburger{
   width: px-to-rem(20px);
@@ -9,7 +10,7 @@
   position: absolute;
   right: px-to-rem(30px);
   z-index: 42;
-  @media screen and (min-width: px-to-rem(860px)) {
+  @include mq(xl){
     display: none;
   }
   &__icon {

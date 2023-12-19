@@ -6,7 +6,13 @@
   &__inner {
     max-width: px-to-rem(316px);
     margin-inline: auto;
-    @include flex(center, flex-start);
-    flex-direction: column;
+    @include flex(center, flex-start, column);
+
+    @include mq(xl) {
+      @include flex(center, flex-start, row);
+      max-width: px-to-rem(896px);
+      padding: px-to-rem(10px);
+      margin-top: px-to-rem(40px);
+    }
   }
 }
