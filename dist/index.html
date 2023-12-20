@@ -8,10 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/index.b10d73a7.css">
-    <script src="/index.8f0c9192.js" async="" defer=""></script>
-    <script src="/index.9ebf4335.js" async="" defer=""></script>
-    <script src="/index.425ad772.js" async="" defer=""></script>
-    <script src="/index.0cbc4949.js" async="" defer=""></script>
+    <script src="/index.6242ce2d.js" async="" defer=""></script>
     <title>Best_Shop_RWD</title>
 </head>
 <body>
@@ -138,7 +135,7 @@
                     <li class="list__item"><img src="/Close.e311fe8d.svg" alt="">Two years licence</li>
                     <li class="list__item"><img src="/Close.e311fe8d.svg" alt="">Full support</li>
                 </ul>
-                <button class="frame__btn frame__btn--red btn">Begin</button>
+                <button class="frame__btn frame__btn--red btn" value="Basic">Begin</button>
             </div>
 
             <div class="frame frame__professional">
@@ -154,7 +151,7 @@
                     <li class="list__item"><img src="/Ckechmark-1.bd599909.svg" alt="">One year licence</li>
                     <li class="list__item"><img src="/Close.e311fe8d.svg" alt="">Full support</li>
                 </ul>
-                <button class="frame__btn frame__btn--blue btn">Begin</button>
+                <button class="frame__btn frame__btn--blue btn" value="Professional">Begin</button>
             </div>
 
             <div class="frame frame__premium">
@@ -170,44 +167,39 @@
                     <li class="list__item"><img src="/Ckechmark-1.bd599909.svg" alt="">Two years licence</li>
                     <li class="list__item"><img src="/Ckechmark-1.bd599909.svg" alt="">Full support</li>
                 </ul>
-                <button class="frame__btn frame__btn--green btn">Begin</button>
+                <button class="frame__btn frame__btn--green btn" value="Premium">Begin</button>
             </div>
         </div>
     </div>
 </section>
 
 <section class="calc">
-    <h2>Calculate how much you’ll pay</h2>
-
-    <div class="calc__columns">
+        <h2>Calculate how much you’ll pay</h2>
         <form class="calc__form">
-            <div class="calc__input">
-                <input type="number" class="form__input" id="products" min="1" step="1" placeholder="Products quantity">
+            <div class="input">
+                <label for="products"></label>
+                <input type="number" class="input__in" id="products" min="1" step="1" placeholder="Enter quantity">
             </div>
-            <div class="calc__input">
-                <input type="number" class="form__input" id="orders" min="1" step="1" placeholder="Estimated orders in month">
+            <div class="input">
+                <label for="orders"></label>
+                <input type="number" class="input__in" id="orders" min="1" step="1" placeholder="Enter orders">
             </div>
-            <div class="calc__select open" id="package" data-value="">
-                <div class="select__input">
-                    Choose package
-                </div>
-
-                <ul class="select__dropdown">
+            <div class="select">
+                <span class="selected-option">Choose package</span>
+                <ul class="options">
                     <li data-value="basic">Basic</li>
                     <li data-value="professional">Professional</li>
                     <li data-value="premium">Premium</li>
                 </ul>
             </div>
-            <label class="form__checkbox">
-                <input type="checkbox" id="accounting">
-                <span class="checkbox"></span>
-                <p class="consent__text">Accounting</p>
-            </label>
-            <label class="form__checkbox">
-                <input type="checkbox" id="terminal">
-                <span class="checkbox"></span>
-                <p class="consent__text">Rental of a payment terminal</p>
-            </label>
+            <div class="checkbox">
+                <input type="checkbox" id="accounting" class="checkbox__in">
+                <label for="accounting" class="checkbox__label">Accounting</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="terminal" class="checkbox__in">
+                <label for="terminal" class="checkbox__label">Rental of a payment terminal</label>
+            </div>
         </form>
 
         <div class="calc__summary">
@@ -241,7 +233,6 @@
                 <span class="total__price">$700</span>
             </div>
         </div>
-    </div>
 </section>
 
 <section id="section4" class="questions">
@@ -297,5 +288,5 @@
     </footer>
 </section>
 
-<script src="/Best_Shop_RWD.3464ddca.js"></script></body>
+</body>
 </html>

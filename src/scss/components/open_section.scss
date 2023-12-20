@@ -37,7 +37,7 @@
         z-index: 2;
         transition: 0.5s all;
 
-        @include mq(xl){
+        @include mq(lg){
           display: none;
         }
 
@@ -82,7 +82,7 @@
       .navigation {
         @include flex(flex-end);
         display: none;
-        @include mq(xl) {
+        @include mq(lg) {
           display: block;
         }
         &__item {

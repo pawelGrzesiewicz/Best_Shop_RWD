@@ -1,10 +1,24 @@
-const burgerTrigger = document.querySelector("div.burgerTrigger");
+
 const burgerMenu = document.querySelector("div.burgerMenu");
 const nav = document.querySelector(".navigation");
-const list = document.querySelector("ul")
 
-burgerTrigger.addEventListener("click",()=> {
+const mediaQuery = window.matchMedia("(max-width: 992px)");
+
+const handleBurgerClick = () => {
     burgerMenu.classList.toggle("active");
-    nav.classList.toggle("active");
-    list.classList.toggle("active")
-});
+
+    if (mediaQuery.matches) {
+        nav.classList.toggle("active");
+    }
+};
+
+
+
+const handleMediaQueryChange = (event) => {
+    if (!event.matches) {
+
+        nav.classList.remove("active");
+    }
+};
+
+export {handleBurgerClick, handleMediaQueryChange, mediaQuery};
