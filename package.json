@@ -3,11 +3,12 @@
   "version": "2.0.0",
   "source": "./index.html",
   "scripts": {
-    "start": "NODE_OPTIONS='--max_old_space_size=4096' parcel",
-    "build": "NODE_OPTIONS='--max_old_space_size=4096' parcel build"
+    "start": "parcel",
+    "build": "parcel build index.html"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.9.3",
+    "cssnano": "^6.0.2",
     "parcel": "^2.9.3"
   },
   "dependencies": {

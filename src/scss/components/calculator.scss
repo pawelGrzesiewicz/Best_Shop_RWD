@@ -7,10 +7,7 @@
   padding: px-to-rem(40px) px-to-rem(40px);
   background-color: $color-light-grey;
   flex-direction: column;
-
-  @include mq(lg) {
-    padding: px-to-rem(60px) px-to-rem(15px);
-  }
+  align-items: center;
 
   h2 {
     text-align: center;
@@ -20,180 +17,182 @@
     margin-top: px-to-rem(7px);
   }
 
-  &__form {
-    label {
-      display: none;
+  &__inner {
+    margin-top: px-to-rem(30px);
+    @include mq(lg) {
+      max-width: px-to-rem(1200px);
+      display: flex;
+      width: 100%;
     }
 
-    .select {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
+    .form {
+      @include mq(lg) {
+        width: 50%;
+      }
 
-      .options {
+      label {
         display: none;
       }
 
-      .open {
-        margin-top: px-to-rem(-10px);
-        display: block;
-        list-style: none;
+      .select {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .options {
+          display: none;
+        }
+
+        .open {
+          position: absolute;
+          top: px-to-rem(60px);
+          z-index: 10;
+          margin-top: px-to-rem(-10px);
+          display: block;
+          list-style: none;
+          width: 100%;
+          border-radius: px-to-rem(6px);
+          border: px-to-rem(1px) solid $red-color;
+          padding-left: px-to-rem(20px);
+          line-height: 1em;
+          font-size: px-to-rem(13px);
+          box-shadow: 0 px-to-rem(3px) px-to-rem(6px) #00000029;
+          background-color: $color-white;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+
+          & li {
+            color: #A5A5A5;
+            padding-top: px-to-rem(10px);
+            padding-bottom: px-to-rem(10px);
+            margin-left: 0;
+            cursor: pointer;
+          }
+
+          & li:hover {
+            color: black;
+          }
+        }
+      }
+
+      .input__in,
+      .selected-option {
+        margin-bottom: px-to-rem(20px);
+        color: #A5A5A5;
         width: 100%;
         border-radius: px-to-rem(6px);
-        border: px-to-rem(1px) solid $red-color;
-        padding-left: px-to-rem(20px);
+        border: px-to-rem(1px) solid $base-color;
+        padding: px-to-rem(16px) px-to-rem(20px);
         line-height: 1em;
         font-size: px-to-rem(13px);
         box-shadow: 0 px-to-rem(3px) px-to-rem(6px) #00000029;
         background-color: $color-white;
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
+        height: px-to-rem(45px);
 
-        & li {
+        &::placeholder {
           color: #A5A5A5;
-          padding-top: px-to-rem(10px);
-          padding-bottom: px-to-rem(10px);
-          margin-left: 0;
-          cursor: pointer;
-        }
-
-        & li:hover {
-          color: black;
         }
       }
-    }
 
-    .input__in,
-    .selected-option {
-      margin-bottom: px-to-rem(20px);
-      color: #A5A5A5;
-      width: 100%;
-      border-radius: px-to-rem(6px);
-      border: px-to-rem(1px) solid $base-color;
-      padding: px-to-rem(11px) px-to-rem(20px);
-      line-height: 1em;
-      font-size: px-to-rem(13px);
-      box-shadow: 0 px-to-rem(3px) px-to-rem(6px) #00000029;
-      background-color: $color-white;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 400;
-
-      &::placeholder {
-        color: #A5A5A5;
-      }
-    }
-
-    .checkbox {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: px-to-rem(20px);
-    }
-
-    .checkbox__label {
-      margin-left: px-to-rem(10px);
-      font-family: 'Open Sans', sans-serif;
-      font-size: px-to-rem(12px);
-      font-weight: 400;
-      color: red;
-    }
-
-    .checkbox__in {
-      position: absolute;
-      width: px-to-rem(24px);
-      height: px-to-rem(24px);
-      opacity: 0;
-    }
-
-    .checkbox::before {
-      content: "";
-      display: inline-block;
-      width: px-to-rem(24px);
-      height: px-to-rem(24px);
-      border: 1px solid #95989A;
-      border-radius: px-to-rem(4px);
-      background-color: #fff;
-      margin-right: px-to-rem(10px);
-    }
-
-    .checkbox:hover::before {
-      background-image: url("../images/Checkmark.svg");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .checkbox__in:checked + .checkbox__label::before {
-
-    }
-  }
-
-  // Move form__checkbox styles outside the &__form block
-  .form__checkbox {
-    display: flex;
-
-    //  .consent__text {
-    //    margin-left: px-to-rem(10px);
-    //    font-family: 'Open Sans', sans-serif;
-    //    font-size: px-to-rem(12px);
-    //    font-weight: 400;
-    //    color: #707070;
-    //  }
-  }
-
-  &__summary {
-    width: 50%;
-    margin-left: px-to-rem(20px);
-    display: flex;
-    flex-direction: column;
-
-    ul {
-      margin-top: 0;
-    }
-
-    @include tablet {
-      width: 100%;
-      margin-left: 0;
-      margin-top: px-to-rem(30px);
-    }
-
-    .summary__total,
-    .list__item {
-      box-shadow: 0 px-to-rem(3px) px-to-rem(6px) rgba(0, 0, 0, .16);
-      border-radius: px-to-rem(6px);
-      justify-content: space-between;
-      align-items: center;
-      color: $color-white;
-      font-size: 0.875rem;
-      display: none;
-
-      &.open {
+      .checkbox {
+        position: relative;
         display: flex;
+        align-items: center;
+        margin-bottom: px-to-rem(20px);
+        height: px-to-rem(45px);
+
+        &__label {
+          margin-left: px-to-rem(10px);
+          font-family: 'Open Sans', sans-serif;
+          font-size: px-to-rem(12px);
+          font-weight: 400;
+          color: red;
+        }
+
+        &__in {
+          position: absolute;
+          width: px-to-rem(24px);
+          height: px-to-rem(24px);
+          opacity: 0;
+        }
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: px-to-rem(24px);
+          height: px-to-rem(24px);
+          border: 1px solid #95989A;
+          border-radius: px-to-rem(4px);
+          background-color: #fff;
+          margin-right: px-to-rem(10px);
+        }
+
+        &:hover::before {
+          background-image: url("../images/Checkmark.svg");
+          background-size: cover;
+          background-position: center;
+        }
       }
     }
 
-    .summary__total {
+    .summary {
       width: 50%;
-      align-self: flex-end;
-      margin-top: px-to-rem(22px);
-      padding: px-to-rem(8px) px-to-rem(20px);
-      background-color: $base-color;
+      display: flex;
+      flex-direction: column;
 
-      .total__price {
-        font-size: 1.25rem;
-        font-weight: 700;
+      @include mq(lg) {
+        margin-left: px-to-rem(120px);
+        width: 50%;
       }
-    }
 
-    .list__item {
-      padding: px-to-rem(7px) px-to-rem(20px);
-      background-color: $green-color;
-      margin-bottom: 8px;
+      ul {
+        margin-top: 0;
+      }
 
-      .item {
-        &__price {
+      .summary__total,
+      .list__item {
+        box-shadow: 0 px-to-rem(3px) px-to-rem(6px) rgba(0, 0, 0, .16);
+        border-radius: px-to-rem(6px);
+        justify-content: space-between;
+        align-items: center;
+        color: $color-white;
+        font-size: 0.875rem;
+        display: none;
+
+        &.open {
+          display: flex;
+          margin-bottom: px-to-rem(20px);
+          height: px-to-rem(45px);
+          padding: px-to-rem(16px) px-to-rem(20px);
+        }
+      }
+
+      .summary__total {
+        width: 50%;
+        align-self: flex-end;
+        margin-top: px-to-rem(22px);
+        padding: px-to-rem(8px) px-to-rem(20px);
+        background-color: $base-color;
+
+        .total__price {
+          font-size: 1.25rem;
           font-weight: 700;
-          font-size: 1.125rem;
+        }
+      }
+
+      .list__item {
+        padding: px-to-rem(7px) px-to-rem(20px);
+        background-color: $green-color;
+        margin-bottom: 8px;
+
+        .item {
+          &__price {
+            font-weight: 700;
+            font-size: 1.125rem;
+          }
         }
       }
     }

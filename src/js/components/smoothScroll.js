@@ -1,6 +1,8 @@
+
 export function setupSmoothScroll() {
-    document.addEventListener("DOMContentLoaded", function () {
+
         const linkRefs = document.querySelectorAll('nav a');
+        console.log('Link elements:', linkRefs);
 
         // Add click event handling for smooth scrolling
         linkRefs.forEach(link => {
@@ -27,5 +29,5 @@ export function setupSmoothScroll() {
                 }
             });
         });
-    });
+
 }

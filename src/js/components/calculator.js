@@ -4,6 +4,7 @@ const formRef = document.querySelector('.calc');
 const selectedRef = document.querySelector('.selected-option');
 const dropdownRef = document.querySelector('.options');
 const itemsRefs = document.querySelectorAll('.options li');
+const checkboxesRefs = document.querySelectorAll('.checkbox');
 
 // Set the initial value of the select input
 if (btnValue) {
@@ -56,4 +57,11 @@ itemsRefs.forEach((item) => {
 // Close the dropdown initially
 dropdownRef.classList.remove('open');
 
-export {formRef, selectRef, dropdownRef, itemsRefs, doAwesomeThings};
+checkboxesRefs.forEach(checkbox => {
+    checkbox.addEventListener('click', () => {
+        // Dodaj lub usuń klasę 'hover' w zależności od tego, czy checkbox jest zaznaczony
+        checkbox.classList.toggle('hover', checkbox.querySelector('.checkbox__in').checked);
+    });
+});
+
+export {formRef, selectedRef, dropdownRef, itemsRefs, doAwesomeThings};

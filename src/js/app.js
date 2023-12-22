@@ -1,4 +1,4 @@
-import {formRef, selectRef, doAwesomeThings} from './components/calculator';
+import {formRef, doAwesomeThings} from './components/calculator';
 import {setupSmoothScroll} from './components/smoothScroll';
 import {handleBurgerClick, handleMediaQueryChange, mediaQuery} from './components/burgerTrigger';
 import { setupButtonClick } from './components/handleBeginBtn';
@@ -15,7 +15,7 @@ formRef.addEventListener('submit', (event) => {
 });
 
 // Setting up smooth scroll functionality
-setupSmoothScroll();
+setupSmoothScroll()
 
 
 
