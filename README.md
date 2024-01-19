@@ -22,8 +22,8 @@ List the key features of your project.
 
 ## Technologies Used
 
-**JavaScript
-**Vite
-**Scss
+- JavaScript
+- Vite
+- Scss
 
 
